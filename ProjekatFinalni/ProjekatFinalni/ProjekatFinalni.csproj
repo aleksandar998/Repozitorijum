@@ -177,6 +177,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KorisnickiController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -200,6 +201,24 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kontakt.cs">
       <DependentUpon>BazaSkola.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Korisnik.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Korisnik.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Korisnik.cs">
+      <DependentUpon>Korisnik.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Korisnik.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Korisnik.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Korisnik1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Korisnik.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MailAdresa.cs">
       <DependentUpon>BazaSkola.tt</DependentUpon>
@@ -236,6 +255,16 @@
       <DependentUpon>BazaSkola.edmx</DependentUpon>
       <LastGenOutput>BazaSkola.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\Korisnik.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Korisnik.edmx</DependentUpon>
+      <LastGenOutput>Korisnik.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Korisnik.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Korisnik.edmx</DependentUpon>
+      <LastGenOutput>Korisnik1.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\BazaSkola.edmx">
@@ -244,6 +273,13 @@
     </EntityDeploy>
     <Content Include="Models\BazaSkola.edmx.diagram">
       <DependentUpon>BazaSkola.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Korisnik.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Korisnik.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Korisnik.edmx.diagram">
+      <DependentUpon>Korisnik.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -290,6 +326,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Korisnicki\DodajiliIzmeni.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
