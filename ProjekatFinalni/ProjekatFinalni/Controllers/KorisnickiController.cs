@@ -11,9 +11,24 @@ namespace ProjekatFinalni.Controllers
     {
         // GET: Korisnicki
         Korisnik kmodel = new Korisnik();
-        public ActionResult DodajiliIzmeni( int id=0)
+        public ActionResult DodajiliIzmeni(int id = 0)
         {
             return View(kmodel);
         }
+
+        [HttpPost]
+        public ActionResult DodajiliIzmeni(Korisnik korisnikmodel)
+        {
+            using (BazaProjekatEntities2 Modelkorisnik = new BazaProjekatEntities2())
+            {
+                Modelkorisnik.Korisniks.Add(korisnikmodel);
+                Modelkorisnik.SaveChanges();
+            }
+            ModelState.Clear();
+            ViewBag.SuccessMessage = "Registracija je uspela";
+
+            return View("DodajiliIzmeni", new Korisnik());
+        }
+
     }
 }

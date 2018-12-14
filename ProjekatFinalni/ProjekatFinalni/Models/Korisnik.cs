@@ -19,14 +19,26 @@ namespace ProjekatFinalni.Models
         public int KorisnikID { get; set; }
         [Required(ErrorMessage = "Morate uneti korisnicko ime.")]
         [DisplayName("Korisnicko ime:")]
+
         public string Korisnickoime { get; set; }
+
+        [Required(ErrorMessage = "Morate uneti lozinku.")]
         [DisplayName("Lozinka:")]
+
         [DataType(DataType.Password)]
+
         public string Lozinka { get; set; }
+
+        [Required(ErrorMessage = "Morate potvrditi lozinku.")]
         [DisplayName("Potvrdi lozinku:")]
+
         [DataType(DataType.Password)]
+        [Compare("Lozinka", ErrorMessage = "Lozinke se ne poklapaju")]
         public string PotvrdiLozinku { get; set; }
+
         [DisplayName("Admin opcija:")]
+
         public bool DaLiJeAdmin { get; set; }
+
     }
 }
