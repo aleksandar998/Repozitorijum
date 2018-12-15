@@ -12,7 +12,9 @@
           <Property Name="KorisnikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Korisnickoime" Type="varchar" MaxLength="50" />
           <Property Name="Lozinka" Type="varchar" MaxLength="50" />
-          <Property Name="DaLiJeAdmin" Type="bit" Nullable="false" />
+          <Property Name="DaLiJeAdmin" Type="bit" />
+          <Property Name="PravoUnosa" Type="bit" />
+          <Property Name="Gost" Type="bit" />
         </EntityType>
         <EntityContainer Name="BazaProjekatModel1StoreContainer">
           <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="dbo" store:Type="Tables" />
@@ -29,9 +31,11 @@
           <Property Name="KorisnikID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Korisnickoime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Lozinka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DaLiJeAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="DaLiJeAdmin" Type="Boolean" />
+          <Property Name="PravoUnosa" Type="Boolean" />
+          <Property Name="Gost" Type="Boolean" />
         </EntityType>
-        <EntityContainer Name="BazaProjekatEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BazaProjekatEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
         </EntityContainer>
       </Schema>
@@ -39,7 +43,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BazaProjekatModel1StoreContainer" CdmEntityContainer="BazaProjekatEntities2">
+        <EntityContainerMapping StorageEntityContainer="BazaProjekatModel1StoreContainer" CdmEntityContainer="BazaProjekatEntities3">
           <EntitySetMapping Name="Korisniks">
             <EntityTypeMapping TypeName="BazaProjekatModel1.Korisnik">
               <MappingFragment StoreEntitySet="Korisnik">
@@ -47,6 +51,8 @@
                 <ScalarProperty Name="Korisnickoime" ColumnName="Korisnickoime" />
                 <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
                 <ScalarProperty Name="DaLiJeAdmin" ColumnName="DaLiJeAdmin" />
+                <ScalarProperty Name="PravoUnosa" ColumnName="PravoUnosa" />
+                <ScalarProperty Name="Gost" ColumnName="Gost" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
