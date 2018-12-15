@@ -19,7 +19,7 @@ namespace ProjekatFinalni.Controllers
         [HttpPost]
         public ActionResult DodajiliIzmeni(Korisnik korisnikmodel)
         {
-            using (BazaProjekatEntities2 Modelkorisnik = new BazaProjekatEntities2())
+            using (BazaProjekatEntities3 Modelkorisnik = new BazaProjekatEntities3())
             {
                 Modelkorisnik.Korisniks.Add(korisnikmodel);
                 Modelkorisnik.SaveChanges();
