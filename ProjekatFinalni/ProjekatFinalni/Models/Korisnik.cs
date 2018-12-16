@@ -45,5 +45,7 @@ namespace ProjekatFinalni.Models
 
         [DisplayName("Unos:")]
         public bool PravoUnosa { get; set; }
+
+        public string LoginErrorPoruka { get; set; }
     }
 }
