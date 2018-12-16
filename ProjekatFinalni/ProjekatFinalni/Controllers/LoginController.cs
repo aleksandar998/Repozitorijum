@@ -30,7 +30,8 @@ namespace ProjekatFinalni.Controllers
                 {
                     Session["korisnikID"] = korisnikPodaci.KorisnikID;
                    
-                    return RedirectToAction("Index", "Pocetna");
+                        return RedirectToAction("Index", "Pocetna");
+                    
                 }
             }
                

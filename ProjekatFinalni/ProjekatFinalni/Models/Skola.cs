@@ -31,6 +31,7 @@ namespace ProjekatFinalni.Models
         public string WebStranica { get; set; }
         public byte[] Fotografija { get; set; }
         public string Beleska { get; set; }
+        public List<Kontakt> Kontakti { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Kontakt> Kontakts { get; set; }
