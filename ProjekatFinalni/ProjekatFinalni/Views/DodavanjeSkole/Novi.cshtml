@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Novi";
+}
+
+<script src="~/Scripts/CustomJs.js"></script>
+<h2>Dodaj novu skolu</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EditorForModel()
+    <p>
+        <button type="submit">Napravi Skolu</button>
+    </p>
+}

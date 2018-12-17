@@ -27,6 +27,8 @@ namespace ProjekatFinalni.Controllers
             ModelState.Clear();
             ViewBag.SuccessMessage = "Registracija je uspela";
 
+
+
             return View("DodajiliIzmeni", new Korisnik());
         }
 
