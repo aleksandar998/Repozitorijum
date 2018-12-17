@@ -1,0 +1,37 @@
+﻿@model ProjekatFinalni.Models.Telefon
+
+@{
+    ViewBag.Title = "Telefon";
+}
+
+<div class="telefonklasa">
+    <p>
+        <label>Telefoni</label>
+        <table>
+            <tr>
+                <td>
+                    <label>Broj telefona</label>
+                </td>
+                <td>
+                    <label>Oznaka tipa</label>
+                </td>
+                <td>
+                    <label>Lokal</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(x => x.BrojTelefona)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.OznakaTipa)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.Lokal)
+                </td>
+            </tr>
+        </table>
+
+
+    </p>
+</div>

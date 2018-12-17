@@ -176,6 +176,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DodavanjeSkoleController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KontaktController.cs" />
@@ -203,10 +204,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BazaSkola.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\HtmlNas.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kontakt.cs">
       <DependentUpon>BazaSkola.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\KontaktCeo.cs" />
     <Compile Include="Models\Korisnik.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +290,7 @@
       <DependentUpon>Korisnik.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\CustomJs.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -339,9 +343,15 @@
     <Content Include="Views\Kontakt\Index.cshtml" />
     <Content Include="Views\Email\Index.cshtml" />
     <Content Include="Views\Telefoni\Index.cshtml" />
+    <Content Include="Views\DodavanjeSkole\Novi.cshtml" />
+    <Content Include="Views\DodavanjeSkole\EditorTemplates\Kontakt.cshtml" />
+    <Content Include="Views\DodavanjeSkole\EditorTemplates\Skola.cshtml" />
+    <Content Include="Views\DodavanjeSkole\EditorTemplates\Telefon.cshtml" />
+    <Content Include="Views\DodavanjeSkole\EditorTemplates\MailAdresa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\HtmlNas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

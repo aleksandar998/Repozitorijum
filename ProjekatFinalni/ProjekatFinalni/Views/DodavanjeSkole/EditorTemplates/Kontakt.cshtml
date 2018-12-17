@@ -1,0 +1,50 @@
+﻿@model ProjekatFinalni.Models.Kontakt
+@using ProjekatFinalni.Models
+@{
+    ViewBag.Title = "Kontakt";
+}
+
+<div class="kontatkiklasa">
+    <p>
+        <label>Kontakti</label>
+        <table>
+            <tr>
+                <td>
+                    <label>Ime</label>
+                </td>
+                <td>
+                    <label>Prezime</label>
+                </td>
+                <td>
+                    <label>Radno Mesto</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(x => x.Ime)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.Prezime)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.RadnoMesto)
+                </td>
+            </tr>
+        </table>
+
+        <div id="telefonizakontakt">
+            @Html.EditorFor(x => x.Telefons)
+        </div>
+
+    <p>
+        @Html.AddLink("Dodaj jos telefona", "#telefonizakontakt", ".telefonklasa", "Telefons", typeof(ProjekatFinalni.Models.Telefon))
+    </p>
+    <div id="emailzakontakt">
+        @Html.EditorFor(x => x.MailAdresas)
+    </div>
+    <p>
+        @Html.AddLink("Dodaj jos Emailova", "#emailzakontakt", ".emailklasa", "MailAdresas", typeof(ProjekatFinalni.Models.MailAdresa))
+    </p>
+
+    
+</div>

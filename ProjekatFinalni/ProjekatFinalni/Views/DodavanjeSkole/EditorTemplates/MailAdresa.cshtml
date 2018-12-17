@@ -1,0 +1,33 @@
+﻿@model ProjekatFinalni.Models.MailAdresa
+
+@{
+    ViewBag.Title = "MailAdresa";
+}
+
+<div class="emailklasa">
+    <p>
+        <label>Email adrese</label>
+        <table>
+            <tr>
+                <td>
+                    <label>Adresa</label>
+                </td>
+                <td>
+                    <label>Oznaka tipa</label>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    @Html.TextBoxFor(x => x.Adresa)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.OznakaTipaMail)
+                </td>
+
+            </tr>
+        </table>
+
+
+    </p>
+</div>

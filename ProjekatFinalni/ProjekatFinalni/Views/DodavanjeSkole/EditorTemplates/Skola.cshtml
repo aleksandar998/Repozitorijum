@@ -1,0 +1,60 @@
+﻿@model ProjekatFinalni.Models.Skola
+    @using ProjekatFinalni.Models
+@{
+    ViewBag.Title = "Skola";
+}
+
+@Html.HiddenFor(x => x.SkolaID)
+
+<p>
+    <label>Ime Skole:</label>
+    @Html.TextBoxFor(x => x.NazivSkole)
+</p>
+
+<p>
+    <label>Opstina Skole:</label>
+    @Html.TextBoxFor(x => x.Opstina)
+</p>
+
+<p>
+    <label>Adresa registracije:</label>
+    @Html.TextBoxFor(x => x.AdresaRegistracije)
+</p>
+
+<p>
+    <label>Postanski broj:</label>
+    @Html.TextBoxFor(x => x.PostanskiBroj)
+</p>
+
+<p>
+    <label>Maticni broj Skole:</label>
+    @Html.TextBoxFor(x => x.MaticniBrojSkole)
+</p>
+
+<p>
+    <label>PIB Skole:</label>
+    @Html.TextBoxFor(x => x.PIB)
+</p>
+
+<p>
+    <label>Broj racuna Skole:</label>
+    @Html.TextBoxFor(x => x.BrojRacunaSkole)
+</p>
+
+<p>
+    <label>Web stranica Skole:</label>
+    @Html.TextBoxFor(x => x.WebStranica)
+</p>
+
+<p>
+    <label>Beleska:</label>
+    @Html.TextBoxFor(x => x.Beleska)
+</p>
+
+<div id="kontaktizaskolu">
+    @Html.EditorFor(x => x.Kontakts)
+</div>
+
+<p>
+    @Html.AddLink("Dodaj jos kontakta", "#kontaktizaskolu", ".kontatkiklasa", "Kontakts", typeof(ProjekatFinalni.Models.Kontakt))
+</p>
